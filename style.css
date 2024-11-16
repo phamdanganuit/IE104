@@ -1,0 +1,16 @@
+:root{
+  --main-color:#374151;
+}
+
+
+body{
+  /* background-color: var(--main-color); */
+  font-size: 1em;
+
+}
+.navbar{
+  padding :20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
