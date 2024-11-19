@@ -3,20 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trang Đăng Nhập</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/reset.css" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./css/login.css" />
+    <script src="main.js"></script>
+    <link rel="shortcut icon" href="./img/monkey-logo.svg" type="image/x-icon" />
   </head>
   <body>
     <div class="container">
-      <div class="form-container">
-        <h2>Đăng Nhập</h2>
-        <input type="text" id="username" placeholder="Tên đăng nhập" required />
-        <input type="password" id="password" placeholder="Mật khẩu" required />
-        <div id="submit-login" class="login-btn">Đăng Nhập</div>
-        <p>Bạn chưa có tài khoản? <a href="register.html">Đăng ký ngay</a></p>
+      <div class="login-container">
+        <div class="circle circle-one"></div>
+        <div class="form-container">
+          <img
+            src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png"
+            alt="illustration"
+            class="illustration"
+          />
+          <h1 class="opacity">Login</h1>
+          <form>
+            <input type="text" id="username" placeholder="Username" required />
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <button id="submit-login" class="login-btn opacity">Login</button>
+          </form>
+          <div class="register-forget opacity">
+            <a href="register.html">REGISTER</a>
+            <a href="">FORGOT PASSWORD</a>
+          </div>
+        </div>
+        <div class="circle circle-two"></div>
       </div>
     </div>
-    <script src="main.js"></script>
   </body>
 </html>
