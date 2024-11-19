@@ -1,10 +1,11 @@
 :root {
   --main-color: #111827;
   --search-color: #374151;
+  --ative-color: #7b68ee;
 }
 
 body {
-  /* background-color: var(--main-color); */
+  background-color: var(--main-color);
   font-size: 1em;
   font-family: Arial, Helvetica, sans-serif !important;
   position: relative;
@@ -122,7 +123,7 @@ input:focus {
 }
 .ovr:hover {
   cursor: pointer;
-  background-color: #7b68ee;
+  background-color: var(--ative-color);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: scale(1.1);
 }
@@ -158,4 +159,8 @@ input:focus {
 }
 .ovr:hover::after {
   opacity: 1;
+}
+.ovr.active {
+  background-color: var(--ative-color); 
+  transform: scale(1.1); 
 }
