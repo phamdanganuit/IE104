@@ -4,17 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="./fonts/K2D/" />
   </head>
   <body>
     <div class="home">
       <div class="navbar">
         <div class="navbar__logo">
-          <img
-            src="https://kickey.net/_next/image?url=%2Fstatic%2Fimages%2Flogo.png&w=64&q=75"
-            alt=""
-          />
+          <a href="overview.html"
+            ><img
+              id="monkey-logo"
+              src="./img/monkey-logo.svg"
+              alt="MonkeyGameShop"
+          /></a>
         </div>
         <div class="navbar__search">
           <input
@@ -51,10 +60,289 @@
           </div>
         </div>
       </div>
-      <div id="sidebar-container"></div>
-      <div class="body"></div>
+      <div class="container">
+        <div id="sidebar-container"></div>
+        <div class="content">
+          <div class="content__main-image">
+            <img
+              src="./img/slideshow/wukong.jpg"
+              alt="Main Image"
+              id="current-image"
+            />
+            <p class="content__caption" id="current-caption">
+              <span class="bold">Black Myth: Wukong</span> <br />
+              <span class="light">
+                Black Myth: Wukong is an action RPG rooted in Chinese mythology.
+                You shall set out as the Destined One to venture into the<br />
+                challenges and marvels ahead, to uncover the obscured truth
+                beneath the veil of a glorious legend from the past.
+              </span>
+            </p>
+          </div>
+
+          <div class="content__queue">
+            <img
+              src="/img/Game Image/god of war/anh1.jpg"
+              alt="Image 2"
+              class="content__queue-image"
+              data-title="God of War"
+              data-description="God of War is a series of first- and third-person military tactical shooters ."
+            />
+            <img
+              src="/img/Game Image/Liar_s Bar/anh2.jpg"
+              alt="Image 3"
+              class="content__queue-image"
+              data-title="Liar Bar"
+              data-description="Liar Bar is a strategy video game mod for the video game Dota 2. "
+            />
+            <img
+              src="/img/Game Image/Marvel’s Spider-Man Remastered/anh1.jpg"
+              alt="Image 4"
+              data-title="Marvel’s Spider-Man"
+              data-description="Marvel’s Spider-Man is a Puzzle RPG Style Mobile Game Developed by xDNA and Published by Nutaku with NSFW content."
+              class="content__queue-image"
+            />
+            <img
+              src="img/Game Image/gta V/anh1.jpg"
+              alt="Image 5"
+              data-title="GTA 5"
+              data-description="GTA 5 is a free-to-play open world K-fantasy MMORPG that can be cross-played on both PC and mobile devices."
+              class="content__queue-image"
+            /><img
+              src="img/Game Image/Resident Evil 4/anh1.jpg"
+              alt="Image 6"
+              class="content__queue-image"
+              data-title="Resident Evil 4"
+              data-description="Resident Evil 4 is a 2020 action platform video game co-developed by One More Level and Slipgate Ironworks."
+            />
+          </div>
+        </div>
+      </div>
+      <div class="body">
+        <h2 class="body__title">Discovery</h2>
+        <div class="discovery">
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/Agrou/anh6.jpg"
+              alt="Agrou"
+            />
+            <h4 class="discovery__game game__name">Agrou</h4>
+            <p class="discovery__game game__cost">Free</p>
+          </div>
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/Left4 Dead 2/anh7.jpg"
+              alt="Game"
+            />
+            <h4 class="discovery__game game__name">Left4 Dead 2</h4>
+            <p class="discovery__game game__cost">16$</p>
+          </div>
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/Subnautica/anh1.jpg"
+              alt="Game"
+            />
+            <h4 class="discovery__game game__name">Subnautica</h4>
+            <p class="discovery__game game__cost">43$</p>
+          </div>
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/Pico Park/anh3.jpg"
+              alt="Game"
+            />
+            <h4 class="discovery__game game__name">Pico Park</h4>
+            <p class="discovery__game game__cost">54$</p>
+          </div>
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/escape the backroom/anh6.jpg"
+              alt="Game"
+            />
+            <h4 class="discovery__game game__name">Escape the backroom</h4>
+            <p class="discovery__game game__cost">12$</p>
+          </div>
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/Moving Out/anh1.jpg"
+              alt="Game"
+            />
+            <h4 class="discovery__game game__name"></h4>
+            <p class="discovery__game game__cost">51$</p>
+          </div>
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/escape the backroom/anh7.jpg"
+              alt="Game"
+            />
+            <h4 class="discovery__game game__name">Escape the backroom</h4>
+            <p class="discovery__game game__cost">1232$</p>
+          </div>
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/Moving Out/anh2.jpg"
+              alt="Game"
+            />
+            <h4 class="discovery__game game__name"></h4>
+            <p class="discovery__game game__cost">431$</p>
+          </div>
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/escape the backroom/anh1.jpg"
+              alt="Game"
+            />
+            <h4 class="discovery__game game__name">Escape the backroom</h4>
+            <p class="discovery__game game__cost">12$</p>
+          </div>
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/Moving Out/anh6.jpg"
+              alt="Game"
+            />
+            <h4 class="discovery__game game__name"></h4>
+            <p class="discovery__game game__cost">152$</p>
+          </div>
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/escape the backroom/anh2.jpg"
+              alt="Game"
+            />
+            <h4 class="discovery__game game__name">Escape the backroom</h4>
+            <p class="discovery__game game__cost">Free</p>
+          </div>
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/Moving Out/anh3.jpg"
+              alt="Game"
+            />
+            <h4 class="discovery__game game__name"></h4>
+            <p class="discovery__game game__cost">Free</p>
+          </div>
+        </div>
+        <h2 class="body__title">Top New Releases</h2>
+        <div class="discovery">
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/Agrou/anh6.jpg"
+              alt="Agrou"
+            />
+            <h4 class="discovery__game game__name">Agrou</h4>
+            <p class="discovery__game game__cost">Free</p>
+          </div>
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/Left4 Dead 2/anh7.jpg"
+              alt="Game"
+            />
+            <h4 class="discovery__game game__name">Left4 Dead 2</h4>
+            <p class="discovery__game game__cost">16$</p>
+          </div>
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/Subnautica/anh1.jpg"
+              alt="Game"
+            />
+            <h4 class="discovery__game game__name">Subnautica</h4>
+            <p class="discovery__game game__cost">43$</p>
+          </div>
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/Pico Park/anh3.jpg"
+              alt="Game"
+            />
+            <h4 class="discovery__game game__name">Pico Park</h4>
+            <p class="discovery__game game__cost">54$</p>
+          </div>
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/escape the backroom/anh6.jpg"
+              alt="Game"
+            />
+            <h4 class="discovery__game game__name">Escape the backroom</h4>
+            <p class="discovery__game game__cost">12$</p>
+          </div>
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/Moving Out/anh1.jpg"
+              alt="Game"
+            />
+            <h4 class="discovery__game game__name"></h4>
+            <p class="discovery__game game__cost">51$</p>
+          </div>
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/escape the backroom/anh7.jpg"
+              alt="Game"
+            />
+            <h4 class="discovery__game game__name">Escape the backroom</h4>
+            <p class="discovery__game game__cost">1232$</p>
+          </div>
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/Moving Out/anh2.jpg"
+              alt="Game"
+            />
+            <h4 class="discovery__game game__name"></h4>
+            <p class="discovery__game game__cost">431$</p>
+          </div>
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/escape the backroom/anh1.jpg"
+              alt="Game"
+            />
+            <h4 class="discovery__game game__name">Escape the backroom</h4>
+            <p class="discovery__game game__cost">12$</p>
+          </div>
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/Moving Out/anh6.jpg"
+              alt="Game"
+            />
+            <h4 class="discovery__game game__name"></h4>
+            <p class="discovery__game game__cost">152$</p>
+          </div>
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/escape the backroom/anh2.jpg"
+              alt="Game"
+            />
+            <h4 class="discovery__game game__name">Escape the backroom</h4>
+            <p class="discovery__game game__cost">Free</p>
+          </div>
+          <div class="discovery__game">
+            <img
+              class="discovery__game game__img"
+              src="./img/Game Image/Moving Out/anh3.jpg"
+              alt="Game"
+            />
+            <h4 class="discovery__game game__name"></h4>
+            <p class="discovery__game game__cost">Free</p>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="main.js"></script>
-    
   </body>
 </html>

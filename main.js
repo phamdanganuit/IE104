@@ -175,4 +175,56 @@ document.addEventListener("DOMContentLoaded", () => {
     addSidebarEventListeners();
     setActivePage(); // Đặt trạng thái "active" cho icon khi trang tải
   };
+  const mainImage = document.getElementById("current-image");
+  const mainCaption = document.getElementById("current-caption");
+  const queueImages = document.querySelectorAll(".content__queue-image");
+
+  let intervalId;
+  let currentIndex = 0;
+
+  // Hàm cập nhật ảnh chính và caption
+  function updateMainContent(index) {
+    const selectedImage = queueImages[index];
+    mainImage.src = selectedImage.src;
+
+    // Lấy tiêu đề và mô tả từ data attribute
+    const title = selectedImage.getAttribute("data-title");
+    const description = selectedImage.getAttribute("data-description");
+
+    // Cập nhật nội dung caption
+    mainCaption.innerHTML = `
+    <span class="bold">${title}</span> <br>
+    <span class="light">${description}</span>
+  `;
+  }
+
+  // Tự động chuyển đổi ảnh mỗi 4 giây
+  function startSlideshow() {
+    intervalId = setInterval(() => {
+      currentIndex = (currentIndex + 1) % queueImages.length; // Lặp qua danh sách ảnh
+      updateMainContent(currentIndex);
+    }, 4000);
+  }
+
+  queueImages.forEach((image, index) => {
+    image.addEventListener("click", () => {
+      clearInterval(intervalId);
+
+      updateMainContent(index);
+
+      currentIndex = index;
+
+      startSlideshow();
+    });
+  });
+  // xử lý thanh cuộn
+  startSlideshow();
+
+  document.querySelectorAll(".discovery").forEach(function (element) {
+    element.addEventListener("wheel", function (e) {
+      if (e.deltaY === 0) return; 
+      this.scrollLeft += e.deltaY;
+      e.preventDefault();
+    });
+  });
 });
